@@ -1,73 +1,204 @@
-# Welcome to your Lovable project
+# 🧠 Second Brain  
+### An AI-Powered Knowledge System
 
-## Project info
+## 📌 Project Overview
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Second Brain is a full-stack AI-powered knowledge management system designed as infrastructure for thought.
 
-## How can I edit this code?
+It enables users to:
 
-There are several ways of editing your application.
+- Capture structured knowledge entries
+- Organize and retrieve information efficiently
+- Automatically generate AI-powered summaries
+- Query their knowledge base conversationally
+- Expose intelligence through a public API endpoint
 
-**Use Lovable**
+This project demonstrates full-stack architecture, secure AI integration, and production-ready deployment.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Core Features
 
-**Use your preferred IDE**
+### 📝 Knowledge Capture
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Users can create knowledge items with:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Title (required)
+- Content (required)
+- Type (Note / Link / Insight)
+- Tags (optional)
+- Source URL (optional)
+- Automatic timestamping
 
-Follow these steps:
+All entries are stored in PostgreSQL using Prisma ORM.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 📊 Smart Dashboard
 
-# Step 3: Install the necessary dependencies.
-npm i
+- Search functionality
+- Filterable note display
+- Grid-based layout
+- Individual detail view
+- Responsive UI
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+### 🤖 AI Intelligence (Server-Side Only)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+All AI processing happens securely on the server.
 
-**Use GitHub Codespaces**
+Features include:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- AI-generated summaries
+- Persistent storage of summaries
+- Conversational querying of stored notes
+- Context-aware responses
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+### 🌐 Public API Endpoint
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
+GET /api/public/brain/query?q=your-question
+
+Example response:
+
+{
+  "answer": "AI generated response...",
+  "sources": ["Note Title 1", "Note Title 2"]
+}
+
+This allows external systems to access structured knowledge intelligence.
+
+---
+
+## 🏗 Architecture Principles
+
+### 🔹 Portable Architecture
+
+The application is structured into separate layers:
+
+- UI Layer – Next.js App Router
+- API Layer – Server routes
+- AI Layer – Lazy-initialized OpenAI client
+- Database Layer – Prisma + PostgreSQL
+- Infrastructure Layer – Vercel deployment
+
+Each layer can be modified independently.
+
+---
+
+### 🔹 Principles-Based UX
+
+The interface follows:
+
+- Minimal cognitive load
+- Clear visual hierarchy
+- Predictable interactions
+- AI as augmentation, not replacement
+- Structured layout and spacing
+
+---
+
+### 🔹 Agent Thinking
+
+The system improves knowledge over time by:
+
+- Persisting AI-generated summaries
+- Structuring contextual retrieval
+- Enabling conversational access to stored insights
+
+This foundation supports future expansion into semantic search and knowledge graphs.
+
+---
+
+### 🔹 Infrastructure Mindset
+
+The system is built as infrastructure, not just UI:
+
+- Public API access
+- Structured JSON contracts
+- Environment-based configuration
+- Serverless deployment
+
+---
+
+## 🛠 Tech Stack
+
+- Next.js (App Router)
 - Tailwind CSS
+- Prisma ORM
+- PostgreSQL (Neon)
+- OpenAI (server-side)
+- Vercel Deployment
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## ⚙️ Local Setup
 
-## Can I connect a custom domain to my Lovable project?
+1. Clone repository:
 
-Yes, you can!
+git clone https://github.com/kothavitesh/Second-Brain-An-AI-Powered-Knowledge-System.git  
+cd Second-Brain-An-AI-Powered-Knowledge-System
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+2. Install dependencies:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+npm install
+
+3. Create `.env` file:
+
+DATABASE_URL="your_postgresql_url"  
+OPENAI_API_KEY="your_openai_key"
+
+4. Generate Prisma client:
+
+npx prisma generate
+
+5. Run development server:
+
+npm run dev
+
+---
+
+## 🧪 API Testing
+
+Local:
+
+http://localhost:3000/api/public/brain/query?q=What is React?
+
+Production:
+
+https://second-brain-an-ai-powered-knowledg.vercel.app/api/public/brain/query?q=What is React?
+
+---
+
+## 🔮 Future Improvements
+
+- Vector-based semantic search
+- Knowledge graph visualization
+- Multi-user authentication
+- AI-powered auto-tagging
+- File upload support
+- Advanced filtering & analytics
+
+---
+
+## 🎯 Assignment Alignment
+
+This project fulfills:
+
+✓ Knowledge Capture  
+✓ Smart Dashboard  
+✓ AI Processing  
+✓ Public Infrastructure  
+✓ Portable Architecture  
+✓ Principles-Based UX  
+✓ Agent Thinking  
+✓ Infrastructure Mindset  
+
+---
+
+## 👤 Author
+
+Kotha Vitesh  
+Full Stack Developer
